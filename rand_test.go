@@ -13,7 +13,7 @@ func TestRand(t *testing.T) {
 
 	i := 0
 	end := 10
-	for actual := range Rand(rnd1).Create() {
+	for actual := range Rand(rnd1) {
 
 		if i == end {
 			break

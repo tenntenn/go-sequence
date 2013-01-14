@@ -21,6 +21,7 @@ func (self *RandSeq) Create() Sequence {
 	return Sequence((<-chan int)(ch))
 }
 
-func Rand(rnd *rand.Rand) *RandSeq {
-	return &RandSeq{rnd}
+func Rand(rnd *rand.Rand) Sequence {
+	rndSeq := &RandSeq{rnd}
+	return rndSeq.Create()
 }
