@@ -1,7 +1,6 @@
-package sequence
+package seq
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -78,7 +77,6 @@ func TestStepBy(t *testing.T) {
 	n := 200
 	j := 0
 	for i := range StepBy(CountUp(n), step) {
-		fmt.Println(i)
 		if i != j {
 			t.Errorf("i and j must be equal.")
 		}
